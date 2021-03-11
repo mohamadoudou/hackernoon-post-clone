@@ -1,0 +1,13 @@
+.post__container{
+    margin: 1.5rem;
+   }
+.post__header{
+
+}
+.post__header h1{
+color: rgb(27, 26, 26);
+font-family:"IBM Plex Mono", monospace;
+font-weight: 600;
+line-height: 2.5rem;
+margin: 2.5rem 0rem;
+}
