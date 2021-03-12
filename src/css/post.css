@@ -1,5 +1,7 @@
 .post__container{
-    margin: 1.5rem;
+    /* display: flex;
+    flex-direction: column; */
+    margin: 1.3rem;
    }
 .post__header{
 
@@ -45,6 +47,9 @@ margin: 2.5rem 0rem;
 }
 .profile{
     display: flex;
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: rgb(60, 60, 59);
 }
 .profile__avatar{
     width: 4rem;
@@ -60,4 +65,32 @@ margin: 2.5rem 0rem;
 }
 .profile h5{
     margin: 0.75rem 0rem;
+}
+.paragraph{
+    font-size: 1.12rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: rgb(60, 60, 59);
+    margin: 2.5rem 0.1rem;
+}
+blockquote{
+    font-size: 1.2rem;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: rgb(60, 60, 59);
+    font-style: italic;
+    margin: 2.5rem 0.1rem;
+    text-align: center;
+
+}
+@media(min-width:482px){
+    .post__container{
+        margin: 0rem;
+    }
+}
+@media (min-width:790px){
+    .profile__markup__container{
+        display: flex;
+    }
+    .profile{
+        flex-direction: column;
+    }
 }
