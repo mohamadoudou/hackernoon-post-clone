@@ -11,3 +11,53 @@ font-weight: 600;
 line-height: 2.5rem;
 margin: 2.5rem 0rem;
 }
+.post__info{
+    display: flex;
+    flex-direction: column;
+}
+.info__left{
+    display: flex;
+    align-items: center;
+}
+.info__left img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.post__number__read{
+    background-color: whitesmoke;
+    margin-right: auto;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+}
+.post__number__read img{
+    width: 1rem;
+    height: 1rem;
+}
+.info__right{
+    align-self: flex-end;
+}
+.info__right img{
+    width: 2rem;
+    height: 2rem;
+}
+.mainImage{
+    margin: 1.5rem 0rem;
+}
+.profile{
+    display: flex;
+}
+.profile__avatar{
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+.profile div{
+    margin: 0rem;
+    padding: 0rem;
+}
+.profile h4{
+    margin: 0rem;
+}
+.profile h5{
+    margin: 0.75rem 0rem;
+}

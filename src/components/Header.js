@@ -18,7 +18,7 @@ function Header(){
 
     return(
         <header className='header'>
-            {console.log('window size at any gevin moment',windowWidth,breakPointWindow)}
+            {/* {console.log('window size at any gevin moment',windowWidth,breakPointWindow)} */}
             {/* <div className='header__container'> */}
                 <div className='upper__header'>
                     <img src={windowWidth<=breakPointWindow?mobileLogo:logo} className='hackernoon__logo'/>
