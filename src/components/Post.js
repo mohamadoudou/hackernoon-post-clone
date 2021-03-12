@@ -29,6 +29,7 @@ function Post() {
                     <span><img src={boat}/></span>
                     <span><img src={money}/></span>
                 </div>
+                </div>
                 <img src={Data.mainImage} className='mainImage'/>
                 <div className='profile__markup__container'>
                     <div className='profile'>
@@ -47,7 +48,6 @@ function Post() {
                         <div dangerouslySetInnerHTML={{__html:Data.markup}}></div>
                     </div>
                 </div>
-            </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 .post__container{
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     margin: 1.3rem;
    }
 .post__header{
@@ -72,6 +72,9 @@ margin: 2.5rem 0rem;
     color: rgb(60, 60, 59);
     margin: 2.5rem 0.1rem;
 }
+.youtube-container iframe{
+    width: 100%;
+}
 blockquote{
     font-size: 1.2rem;
     font-family: "IBM Plex Sans", sans-serif;
@@ -87,6 +90,18 @@ blockquote{
     }
 }
 @media (min-width:790px){
+    .post__header h1{
+        line-height: 2.6rem;
+        text-align: center;
+        margin: 2.5rem 0rem;
+    }
+    .post__info{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .post__number__read{
+        margin-right: 0.5rem;
+    }
     .profile__markup__container{
         display: flex;
     }
