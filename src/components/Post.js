@@ -1,5 +1,6 @@
 import React from 'react'
 import {FiTwitter,FiGithub} from 'react-icons/fi'
+import Related from './Related'
 import Data from '../step-by-step-guide-to-create-3-different-types-of-loading-screens-in-react-lu2633nd.json'
 import '../css/post.css'
 import heart from '../images/heart.png'
@@ -11,6 +12,7 @@ import bookmark from '../images/bookmark.png'
 
 function Post() {
     return (
+        <div className='post'>
         <div className='post__container'>
             {console.log(Data)}
             <div className='post__header'>
@@ -36,7 +38,7 @@ function Post() {
                         {console.log('profile',Data.profile)}
                         <img src={Data.profile.avatar} className='profile__avatar'/>
                         <div>
-                        <h4>@{Data.profile.handle}</h4>
+                        <h4><a href='#'>@{Data.profile.handle}</a></h4>
                         <h5>{Data.profile.handle}</h5>
                         <p>
                             {Data.profile.bio}
@@ -44,11 +46,37 @@ function Post() {
                         <div><span><FiTwitter/></span><span><FiGithub/></span></div>
                         </div>
                     </div>
-                    <div>
+                    <div className='markup__container'>
                         <div dangerouslySetInnerHTML={{__html:Data.markup}}></div>
                     </div>
                 </div>
         </div>
+        <div className='related__container'>
+            <fieldset><legend><h1>RELATED</h1></legend></fieldset>
+        </div>
+        <div className='relatedStory'>
+            {console.log('relatedss',Data.relatedStories)}
+            {Data.relatedStories.map((relatedStory,index)=>{
+                return(
+                    <Related relatedStory={relatedStory} key={index}/>
+                )
+            })}
+        </div>
+        <div className='tags__container'>
+            <fieldset><legend><h1>TAGS</h1></legend></fieldset>
+            <div className='tag'>
+            {Data.tags.map((tag,index)=>{
+                return(
+                    <div key={index}>#{tag}</div>
+                )
+            })}
+            </div>
+        </div>
+        <div className='joinhackernoon'>
+            <a href='#'>Join Haker Noon</a>
+            <p>create your free account to unclock your custom reading experience</p>
+        </div>
+    </div>
     )
 }
 
