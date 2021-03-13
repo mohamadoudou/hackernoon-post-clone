@@ -268,6 +268,9 @@ legend h1{
         margin-left:20%;
         margin-right: 20%;
     }
+    .code-container{
+        text-align: left;
+    }
     .bottom__share{
         margin-left: 20%;
         margin-right: 20%;
