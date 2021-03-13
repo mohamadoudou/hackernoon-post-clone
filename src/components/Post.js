@@ -67,7 +67,7 @@ function Post() {
             <div className='tag'>
             {Data.tags.map((tag,index)=>{
                 return(
-                    <div key={index}>#{tag}</div>
+                    <a href='#' key={index}>#{tag}</a>
                 )
             })}
             </div>

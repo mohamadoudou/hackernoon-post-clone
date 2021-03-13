@@ -115,19 +115,22 @@ blockquote{
     font-style: italic;
     margin: 2.5rem 0.1rem;
     text-align: center;
+}
+/* .related__container fieldset{
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+} */
 
-}
-.related__container fieldset{
+fieldset{
     border-bottom: 0px;
     border-left: 0px;
     border-right: 0px;
     text-align: center;
 }
-.tags__container fieldset{
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    text-align: center;
+legend h1{
+    font-family: "IBM Plex Mono", monospace;
 }
 .tag{
     display: flex;
@@ -135,16 +138,18 @@ blockquote{
     justify-content: center;
     align-items: center;
 }
-.tag div{
-    border: 2px solid gray;
+.tag a{
+    box-shadow: 3px 0 rgb(211, 209, 209), -3px 0 rgb(211, 209, 209), 0 -3px rgb(211, 209, 209), 0 3px rgb(211, 209, 209);
     background-color: whitesmoke;
-    color:rgb(27, 26, 26);
-    font-size: 0.80rem;
-    font-weight: 400;
-    padding: 0.3rem;
+    text-decoration: none;
+    color:rgb(87, 80, 80);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem;
     margin: 0.4rem;
 }
-.tag div:hover{
+.tag a:hover{
     background:rgb(58, 250, 41);
 }
 .joinhackernoon{
@@ -172,6 +177,7 @@ blockquote{
         margin: 0rem;
     }
 }
+/* add another break point for related */
 @media (min-width:790px){
     .post__header h1{
         line-height: 2.6rem;
@@ -240,6 +246,10 @@ blockquote{
     .post__container{
         max-width:1200px;
         margin: auto;
+    }
+    .tags__container{
+        margin-left: 20%;
+        margin-right: 20%;
     }
 }
 @media(min-width:950px){
