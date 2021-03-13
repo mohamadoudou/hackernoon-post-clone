@@ -116,6 +116,56 @@ blockquote{
     margin: 2.5rem 0.1rem;
     text-align: center;
 }
+.bottom__reactions{
+    text-align: center;
+}
+.bottom__reactions img{
+    width: 2rem;
+    height: 2rem;
+}
+.bottom__share{
+    text-align: right;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.bottom__share a{
+    padding: 0.75rem;
+}
+.bottom__share a::before{
+    content: ' ';
+    width: 0rem;
+    height: 0rem;
+    opacity: 0;
+}
+.bottom__share a:hover:before{
+    content: ' ';
+    width: 0rem;
+    height: 0rem;
+    opacity: 0;
+}
+.bottom__prof__sub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 0 rgb(58, 250, 41), -5px 0 rgb(58, 250, 41), 0 -5px rgb(58, 250, 41), 0 5px rgb(58, 250, 41);
+    color: rgb(58, 250, 41);
+    background: rgb(34, 33, 33);
+}
+.bottom__profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom__profile img{
+    box-shadow: 3px 0 rgb(211, 209, 209), -3px 0 rgb(211, 209, 209), 0 -3px rgb(211, 209, 209), 0 3px rgb(211, 209, 209);
+    width: 3rem;
+    height: 3rem;
+    margin-right:0rem;
+}
+.bottom__subscribe h4{
+    margin-top: 0rem;
+}
 /* .related__container fieldset{
     border-bottom: 0px;
     border-left: 0px;
@@ -218,17 +268,30 @@ legend h1{
         margin-left:20%;
         margin-right: 20%;
     }
+    .bottom__share{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .bottom__prof__sub{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
     .related__container{
         display: inline;
     }
     .related__container{
-
+        max-width:1200px;
     }
     .related__container fieldset{
         border-bottom: 0px;
         border-left: 0px;
         border-right: 0px;
         text-align: center;
+        max-width:1200px;
+        margin: auto;
     }
     .relatedStory{
         display: grid;
@@ -252,10 +315,10 @@ legend h1{
         margin-right: 20%;
     }
 }
-@media(min-width:950px){
+@media(min-width:1218px){
     .relatedStory{
         display: grid;
-        grid-template-columns:minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-columns:minmax(0, 1fr)  minmax(0, 1fr) minmax(0, 1fr);
         gap: 1rem;
         max-width:1200px;
         margin: auto;

@@ -49,7 +49,7 @@ function Related({relatedStory}){
                  background: `url(${relatedStory.profile?relatedStory.mainImage:relatedStory.image})`,
                  backgroundSize: 'cover',
                  
-            }}>
+            }}> 
                 {relatedStory.reactionsCount>0?
             <p className='reactions'>{relatedStory.reactionsCount} reactions </p>:null
         }
