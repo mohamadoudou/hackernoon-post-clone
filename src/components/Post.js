@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FiTwitter, FiGithub, FiLinkedin, FiInstagram, FiFacebook } from 'react-icons/fi'
 import Related from './Related'
 import Data from '../step-by-step-guide-to-create-3-different-types-of-loading-screens-in-react-lu2633nd.json'
 import '../css/post.css'
 import heart from '../images/heart.png'
+import heart1 from '../images/heart1.png'
 import light from '../images/light.png'
+import light1 from '../images/light1.png'
 import boat from '../images/boat.png'
+import boat1 from '../images/boat1.png'
 import money from '../images/money.png'
+import money1 from '../images/money1.png'
 import star from '../images/star.png'
 import bookmark from '../images/bookmark.png'
 
 function Post() {
+    const [heartSrc,setHeart]=useState(heart)
+    const [lightSrc,setLigth]=useState(light1)
+    const [boatSrc,setBoat]=useState(boat)
+    const [moneySrc,setMoney]=useState(money1)
+
     const time=Data.createdAt*1000
     let dateObject=new Date(time)
     let date = ("0" + dateObject.getDate()).slice(-2);
@@ -32,10 +41,30 @@ function Post() {
                     </div>
                     <div className='info__right'>
                         <span>{Data.reactions.total}</span>
-                        <span><img src={heart} /></span>
-                        <span><img src={light} /></span>
-                        <span><img src={boat} /></span>
-                        <span><img src={money} /></span>
+                        <span className='reaction'>
+                            <img src={heartSrc} 
+                            onMouseOver={e => setHeart(heart)}
+                            onMouseOut={e => setHeart(heart1)}
+                            />
+                        </span>
+                        <span className='reaction'>
+                            <img src={lightSrc} 
+                                onMouseOver={e => setLigth(light)}
+                                onMouseOut={e => setLigth(light1)}
+                            />
+                        </span>
+                        <span className='reaction'>
+                            <img src={boatSrc} 
+                                onMouseOver={e => setBoat(boat1)}
+                                onMouseOut={e => setBoat(boat)}
+                            />
+                        </span>
+                        <span className='reaction'>
+                            <img src={moneySrc} 
+                                onMouseOver={e => setMoney(money)}
+                                onMouseOut={e => setMoney(money1)}
+                            />
+                        </span>
                     </div>
                 </div>
                 <img src={Data.mainImage} className='mainImage' />
