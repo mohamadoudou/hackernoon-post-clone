@@ -27,10 +27,10 @@ function Header(){
                             <input type='text' placeholder='Search...'/>
                         </form>
                         { windowWidth<=breakPointWindow?null
-                           :<p>Start Writing</p>
+                           :<a href='#' className='start__writing'>Start Writing</a>
                         }
                          { windowWidth<=breakPointWindow?null
-                           :<p>Log in</p>
+                           :<a href='#' className='login'>Log in</a>
                         }
                          { windowWidth<=breakPointWindow?
                          <span className='menu__burger'>

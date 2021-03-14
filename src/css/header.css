@@ -2,8 +2,6 @@
     background-color: rgb(58, 250, 41);
     font-family: "IBM Plex Mono", monospace;
     width: 100%;
-    /* height: 3.73rem; */
-    /* overflow: hidden; */
 }
 .header__container{
     display: flex;
@@ -14,19 +12,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .8rem;
-   
+    padding: .8rem;  
 }
 .upper__header__utils{
     display: flex;
     align-items: center;
     margin-right: 1rem;
-
 }
 .hackernoon__logo{
     height: 2.6rem;
 }
-
 input[type='text']{
     background-color: rgb(0, 59, 0);
     border:1px solid black;
@@ -43,20 +38,26 @@ input[type='text']{
     font-size: 1.05rem;
     opacity: 1;
   }
-.upper__header__utils p{
+.start__writing{
     border: 2.5px solid black;
+    text-decoration: none;
     font-size: 1.05rem;
     font-weight: bolder;
+    color: black;
     padding: .3rem;
     margin-right: 1rem;
 }
-
-.upper__header__utils p:hover{
-    
+.login{
+    font-size: 1.05rem;
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    padding: .3rem;
+    margin-right: 2rem;
 }
-
-.upper__header__utils span{
-   
+.upper__header__utils a:hover{
+    background: rgb(143, 245, 134);
+    border: 2.5px solid black;
 }
 .menu__burger{
     cursor: pointer;
@@ -86,7 +87,6 @@ input[type='text']{
     .lower__header a{
         text-decoration: none;
         font-size: 1.02rem;
-        /* font-weight: bold; */
         color: white;
     }
     .lower__header a:not(:last-child){
@@ -105,4 +105,3 @@ input[type='text']{
         color:rgb(58, 250, 41); 
     }
 }
-
