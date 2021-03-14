@@ -218,13 +218,6 @@ blockquote{
 .bottom__subscribe h4{
     margin-top: 0rem;
 }
-/* .related__container fieldset{
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    text-align: center;
-} */
-
 fieldset{
     border-bottom: 0px;
     border-left: 0px;
@@ -279,7 +272,6 @@ legend h1{
         margin: 0rem;
     }
 }
-/* add another break point for related */
 @media (min-width:790px){
     .post__header h1{
         line-height: 2.8rem;
@@ -361,9 +353,6 @@ legend h1{
     .joinhackernoon a{
         font-size: 2rem;
     }
-     /*.code-container{
-        margin-left: -20rem;
-    } */
 }
 @media(min-width:890px){
     .post__container{

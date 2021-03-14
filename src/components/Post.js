@@ -31,7 +31,6 @@ function Post() {
     return (
         <div className='post'>
             <div className='post__container'>
-                {console.log(Data)}
                 <div className='post__header'>
                     <h1>{Data.title}</h1>
                 </div>
@@ -76,7 +75,6 @@ function Post() {
                 <img src={Data.mainImage} alt='post' className='mainImage' />
                 <div className='profile__markup__container'>
                     <div className='profile'>
-                        {console.log('profile', Data.profile)}
                         <img src={Data.profile.avatar} alt='avatar' className='profile__avatar' />
                         <div>
                             <h4><a href={`https://hackernoon.com/u/${Data.profile.handle}`}>@{Data.profile.handle}</a></h4>

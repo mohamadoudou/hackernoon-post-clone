@@ -68,7 +68,7 @@
 }
 .post__footer__left{
     display: flex;
-    margin: 0.9rem 0rem 0.9rem 0.9rem;
+    margin: 0.9rem -2rem 0.9rem 0.9rem;
 }
 .post__footer__img{
     box-shadow: 3px 0 rgb(211, 209, 209), -3px 0 rgb(211, 209, 209), 0 -3px rgb(211, 209, 209), 0 3px rgb(211, 209, 209);
