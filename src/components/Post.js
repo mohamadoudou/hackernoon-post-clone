@@ -66,7 +66,7 @@ function Post() {
                             <div className='bottom__profile'>
                                 <img src={Data.profile.avatar} className='profile__avatar' />
                                 <div>
-                                    <h4><a href='#'>@{Data.profile.handle}</a></h4>
+                                    <h4><a href='#' className="bottom__profile__link">@{Data.profile.handle}</a></h4>
                                     <h5>{Data.profile.handle}</h5>
                                 </div>
                             </div>

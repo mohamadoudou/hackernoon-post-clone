@@ -148,7 +148,7 @@ blockquote{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 0 rgb(58, 250, 41), -5px 0 rgb(58, 250, 41), 0 -5px rgb(58, 250, 41), 0 5px rgb(58, 250, 41);
+    box-shadow: 4px 0 rgb(34, 33, 33), -4px 0 rgb(34, 33, 33), 0 -4px rgb(34, 33, 33), 0 4px rgb(34, 33, 33), 8px 0 rgb(58, 250, 41), -8px 0 rgb(58, 250, 41), 0 -8px rgb(58, 250, 41), 0 8px rgb(58, 250, 41), 0 0 0 4px rgb(58, 250, 41);
     color: rgb(58, 250, 41);
     background: rgb(34, 33, 33);
 }
@@ -162,6 +162,15 @@ blockquote{
     width: 3rem;
     height: 3rem;
     margin-right:0rem;
+}
+.bottom__profile h4{
+    margin-bottom: 0rem;
+}
+.bottom__profile h5{
+    margin-top: 0.75rem;
+}
+.bottom__profile__link{
+   color: rgb(58, 250, 41) !important;
 }
 .bottom__subscribe h4{
     margin-top: 0rem;
