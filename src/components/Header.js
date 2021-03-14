@@ -32,7 +32,12 @@ function Header(){
                          { windowWidth<=breakPointWindow?null
                            :<p>Log in</p>
                         }
-                         { windowWidth<=breakPointWindow?<span>burg</span>
+                         { windowWidth<=breakPointWindow?
+                         <span className='menu__burger'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
                            :null
                         }
                     </div>

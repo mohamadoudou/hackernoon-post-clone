@@ -54,8 +54,18 @@ input[type='text']{
 .upper__header__utils span{
    
 }
-
-
+.menu__burger{
+    cursor: pointer;
+}
+.menu__burger span{
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  margin-bottom: 5px;
+  position: relative;
+  background: rgb(60, 60, 59);
+  border-radius: 3px;
+}
 
 @media (min-width:790px){
     .upper__header{
