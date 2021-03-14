@@ -10,6 +10,7 @@
 .footer__links a{
     position: relative;
     text-decoration: none;
+    color: rgb(27, 26, 26);
     font-size: 0.9rem;
     margin: 0rem 0.8rem;
     z-index: 2;

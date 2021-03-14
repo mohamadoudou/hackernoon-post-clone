@@ -79,6 +79,7 @@
 .post__footer__left a{
     position: relative;
     text-decoration: none;
+    color:rgb(27, 26, 26);
     font-size: 1.2rem;
     z-index: 2;
 }
