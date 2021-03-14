@@ -1,9 +1,13 @@
 import React from 'react'
-import {FiTwitter,FiGithub,FiLinkedin,FiInstagram,
-    FiYoutube,FiFacebook} from 'react-icons/fi'
+import {
+        FiTwitter, FiGithub, FiLinkedin, FiInstagram,
+        FiYoutube, FiFacebook
+       } from 'react-icons/fi'
 import '../css/footer.css'
-function Footer(){
-    return(
+
+function Footer() {
+    
+    return (
         <div className='footer__container'>
             <div className='footer__links'>
                 <a href='#'><b>Help</b></a>
@@ -25,12 +29,12 @@ function Footer(){
                 <a href='#'>Chrome Extension</a>
             </div>
             <div className='footer__social__links'>
-                <a href='#'><FiLinkedin className='social__icon'/></a>
-                <a href='#'><FiFacebook className='social__icon'/></a>
-                <a href='#'><FiTwitter className='social__icon'/></a>
-                <a href='#'><FiGithub className='social__icon'/></a>
-                <a href='#'><FiYoutube className='social__icon'/></a>
-                <a href='#'><FiInstagram className='social__icon'/></a>
+                <a href='#'><FiLinkedin className='social__icon' /></a>
+                <a href='#'><FiFacebook className='social__icon' /></a>
+                <a href='#'><FiTwitter className='social__icon' /></a>
+                <a href='#'><FiGithub className='social__icon' /></a>
+                <a href='#'><FiYoutube className='social__icon' /></a>
+                <a href='#'><FiInstagram className='social__icon' /></a>
             </div>
         </div>
     )

@@ -1,49 +1,49 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../images/logo.png'
 import mobileLogo from '../images/logo-mobile.png'
 import '../css/header.css'
 
-function Header(){
+function Header() {
+
     const [windowWidth, setWindowWidth] = useState(0)
-    const [breakPointWindow]=useState(790)
+    const [breakPointWindow] = useState(790)
+
     let resizeWindow = () => {
         setWindowWidth(window.innerWidth)
-      }
-    
+    }
+
     useEffect(() => {
-    resizeWindow()
-    window.addEventListener("resize", resizeWindow)
-    return () => window.removeEventListener("resize", resizeWindow)
+        resizeWindow()
+        window.addEventListener("resize", resizeWindow)
+        return () => window.removeEventListener("resize", resizeWindow)
     }, []);
 
-    return(
+    return (
         <header className='header'>
-            {/* {console.log('window size at any gevin moment',windowWidth,breakPointWindow)} */}
-            {/* <div className='header__container'> */}
-                <div className='upper__header'>
-                    <img src={windowWidth<=breakPointWindow?mobileLogo:logo} className='hackernoon__logo'/>
-                    <div className='upper__header__utils'>
-                        <form>
-                            <input type='text' placeholder='Search...'/>
-                        </form>
-                        { windowWidth<=breakPointWindow?null
-                           :<a href='#' className='start__writing'>Start Writing</a>
-                        }
-                         { windowWidth<=breakPointWindow?null
-                           :<a href='#' className='login'>Log in</a>
-                        }
-                         { windowWidth<=breakPointWindow?
-                         <span className='menu__burger'>
+            <div className='upper__header'>
+                <img src={windowWidth <= breakPointWindow ? mobileLogo : logo} className='hackernoon__logo' />
+                <div className='upper__header__utils'>
+                    <form>
+                        <input type='text' placeholder='Search...' />
+                    </form>
+                    {windowWidth <= breakPointWindow ? null
+                        : <a href='#' className='start__writing'>Start Writing</a>
+                    }
+                    {windowWidth <= breakPointWindow ? null
+                        : <a href='#' className='login'>Log in</a>
+                    }
+                    {windowWidth <= breakPointWindow ?
+                        <span className='menu__burger'>
                             <span></span>
                             <span></span>
                             <span></span>
                         </span>
-                           :null
-                        }
-                    </div>
+                        : null
+                    }
                 </div>
-                {windowWidth<=breakPointWindow?null:
-                 <div className='lower__header'>
+            </div>
+            {windowWidth <= breakPointWindow ? null :
+                <div className='lower__header'>
                     <a href='#'>Read</a>
                     <a href='#'>Top Stories</a>
                     <a href='#'>Write</a>
@@ -54,8 +54,7 @@ function Header(){
                     <a href='#'>Tech Companies</a>
                     <a href='#'>Careers</a>
                     <a href='#'>Slogging</a>
-                </div> }
-            {/* </div> */}
+                </div>}
         </header>
     )
 }

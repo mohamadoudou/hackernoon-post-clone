@@ -15,6 +15,7 @@ import star from '../images/star.png'
 import bookmark from '../images/bookmark.png'
 
 function Post() {
+
     const [heartSrc, setHeart] = useState(heart1)
     const [lightSrc, setLigth] = useState(light1)
     const [boatSrc, setBoat] = useState(boat)
@@ -26,6 +27,7 @@ function Post() {
     let posDate = ("0" + dateObject.getDate()).slice(-1);
     let year = (dateObject.getFullYear());
     const month = dateObject.toLocaleString('default', { month: 'long' });
+    
     return (
         <div className='post'>
             <div className='post__container'>
