@@ -11,6 +11,12 @@ import star from '../images/star.png'
 import bookmark from '../images/bookmark.png'
 
 function Post() {
+    const time=Data.createdAt*1000
+    let dateObject=new Date(time)
+    let date = ("0" + dateObject.getDate()).slice(-2);
+    let posDate=("0" + dateObject.getDate()).slice(-1);
+    let year = (dateObject.getFullYear());
+    const month = dateObject.toLocaleString('default', { month: 'long' });
     return (
         <div className='post'>
             <div className='post__container'>
@@ -20,12 +26,12 @@ function Post() {
                 </div>
                 <div className='post__info'>
                     <div className='info__left'>
-                        <p>february 22nd 2021 </p>
-                        <span className='post__number__read'><img src={star} /> 402 reads</span>
+                        <a href='#'> {month} {date}{posDate==1?'st':posDate==2?'nd':'th'} {year}</a>
+                        <span className='post__number__read'><img src={star} /> 567 reads</span>
                         <span><img src={bookmark} /></span>
                     </div>
                     <div className='info__right'>
-                        <span>10</span>
+                        <span>{Data.reactions.total}</span>
                         <span><img src={heart} /></span>
                         <span><img src={light} /></span>
                         <span><img src={boat} /></span>
@@ -52,7 +58,7 @@ function Post() {
                     <div className='markup__container'>
                         <div dangerouslySetInnerHTML={{ __html: Data.markup }}></div>
                         <div className='bottom__reactions'>
-                            <span>10</span>
+                            <span>{Data.reactions.total}</span>
                             <span><img src={heart} /></span>
                             <span><img src={light} /></span>
                             <span><img src={boat} /></span>
