@@ -81,6 +81,7 @@ margin: 2.5rem 0rem;
     color: rgb(60, 60, 59);
 }
 .profile__avatar{
+    box-shadow: 3px 0 rgb(211, 209, 209), -3px 0 rgb(211, 209, 209), 0 -3px rgb(211, 209, 209), 0 3px rgb(211, 209, 209);
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
@@ -94,6 +95,21 @@ margin: 2.5rem 0rem;
 }
 .profile h5{
     margin: 0.75rem 0rem;
+}
+.profile__icons a::before{
+    width: 0rem;
+    height: 0rem;
+    opacity: 0;
+}
+.profile__icons a:hover::before{
+    width: 0rem;
+    height: 0rem;
+    opacity: 0;
+}
+.profile__icon{
+    margin: 0rem 0.4rem;
+    background-color: black;
+    color: rgb(58, 250, 41);
 }
 .markup__container pre{
     display: inline;
@@ -249,6 +265,10 @@ legend h1{
     }
     .post__number__read{
         margin-right: 0.5rem;
+    }
+    .profile div{
+        margin-top: 2rem;
+        padding: 0rem;
     }
     .profile__markup__container{
         position: relative;

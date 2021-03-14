@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiTwitter, FiGithub,FiLinkedin,FiInstagram,FiFacebook } from 'react-icons/fi'
+import { FiTwitter, FiGithub, FiLinkedin, FiInstagram, FiFacebook } from 'react-icons/fi'
 import Related from './Related'
 import Data from '../step-by-step-guide-to-create-3-different-types-of-loading-screens-in-react-lu2633nd.json'
 import '../css/post.css'
@@ -43,7 +43,10 @@ function Post() {
                             <p>
                                 {Data.profile.bio}
                             </p>
-                            <div><span><FiTwitter /></span><span><FiGithub /></span></div>
+                            <div className='profile__icons'>
+                                <a href='#'><FiTwitter className='profile__icon' /></a>
+                                <a href='#'><FiGithub className='profile__icon' /></a>
+                            </div>
                         </div>
                     </div>
                     <div className='markup__container'>
