@@ -5,7 +5,7 @@ import '../css/related.css'
 function PostHeader({ relatedStory }) {
     return (
         <div className='post__header'>
-            <a href='#'><mark>{relatedStory.text ? relatedStory.text : relatedStory.title}</mark></a>
+            <a href='/#'><mark>{relatedStory.text ? relatedStory.text : relatedStory.title}</mark></a>
         </div>
     )
 }
@@ -21,9 +21,9 @@ function PostFooter({ relatedStory }) {
         return (
             <div className='post__footer'>
                 <div className='post__footer__left'>
-                    <img src={relatedStory.profile.avatar} alt='avatar image' className='post__footer__img' />
+                    <img src={relatedStory.profile.avatar} alt='avatar' className='post__footer__img' />
                     <div>
-                        <a href='#'>@{relatedStory.profile.handle}</a>
+                        <a href='/#'>@{relatedStory.profile.handle}</a>
                         <p>{relatedStory.profile.displayName}</p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ function Related({ relatedStory }) {
             <PostHeader relatedStory={relatedStory ? relatedStory : null} />
             <div className='post__body' style={{
                 background: `url(${relatedStory.profile ? relatedStory.mainImage : relatedStory.image})`,
-                backgroundSize: relatedStory.profile?'cover':'content',
+                backgroundSize: relatedStory.profile?'cover':'contain',
                 backgroundRepeat: 'no-repeat'
 
             }}>

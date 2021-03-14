@@ -10,7 +10,7 @@
     background-color: white;
     font-family: "IBM Plex Mono", monospace;
     color:rgb(27, 26, 26);
-    align-items: end;
+    align-items: flex-end;
     min-height: 5rem;
 }
 .post__header a{
@@ -27,7 +27,6 @@
 }
 .post__body{
     position: relative;
-    background-size: cover;
     height: 12.5rem;
 }
 .post__body:hover{

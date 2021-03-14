@@ -27,7 +27,7 @@ function Post() {
     let posDate = ("0" + dateObject.getDate()).slice(-1);
     let year = (dateObject.getFullYear());
     const month = dateObject.toLocaleString('default', { month: 'long' });
-    
+
     return (
         <div className='post'>
             <div className='post__container'>
@@ -37,52 +37,56 @@ function Post() {
                 </div>
                 <div className='post__info'>
                     <div className='info__left'>
-                        <a href='#'> {month} {date}{posDate == 1 ? 'st' : posDate == 2 ? 'nd' : 'th'} {year}</a>
-                        <span className='post__number__read'><img src={star} /> 567 reads</span>
-                        <span><img src={bookmark} /></span>
+                        <a href='/#'> {month} {date}{posDate == 1 ? 'st' : posDate == 2 ? 'nd' : 'th'} {year}</a>
+                        <span className='post__number__read'><img src={star} alt='small star' /> 567 reads</span>
+                        <span><img src={bookmark}  alt='bookmark'/></span>
                     </div>
                     <div className='info__right'>
                         <span className='total__reactions'>{Data.reactions.total}</span>
                         <span className='reaction'>
                             <img src={heartSrc}
+                                alt='heart'
                                 onMouseOver={e => setHeart(heart)}
                                 onMouseOut={e => setHeart(heart1)}
                             />
                         </span>
                         <span className='reaction'>
                             <img src={lightSrc}
+                                alt='lightbulb'
                                 onMouseOver={e => setLigth(light)}
                                 onMouseOut={e => setLigth(light1)}
                             />
                         </span>
                         <span className='reaction'>
                             <img src={boatSrc}
+                                alt='boat'
                                 onMouseOver={e => setBoat(boat1)}
                                 onMouseOut={e => setBoat(boat)}
                             />
                         </span>
                         <span className='reaction'>
                             <img src={moneySrc}
+                                alt='money'
                                 onMouseOver={e => setMoney(money)}
                                 onMouseOut={e => setMoney(money1)}
                             />
                         </span>
                     </div>
                 </div>
-                <img src={Data.mainImage} className='mainImage' />
+                <img src={Data.mainImage} alt='post' className='mainImage' />
                 <div className='profile__markup__container'>
                     <div className='profile'>
                         {console.log('profile', Data.profile)}
-                        <img src={Data.profile.avatar} className='profile__avatar' />
+                        <img src={Data.profile.avatar} alt='avatar' className='profile__avatar' />
                         <div>
-                            <h4><a href='#'>@{Data.profile.handle}</a></h4>
+                            <h4><a href={`https://hackernoon.com/u/${Data.profile.handle}`}>@{Data.profile.handle}</a></h4>
                             <h5>{Data.profile.handle}</h5>
                             <p>
                                 {Data.profile.bio}
                             </p>
                             <div className='profile__icons'>
-                                <a href='#'><FiTwitter className='profile__icon' /></a>
-                                <a href='#'><FiGithub className='profile__icon' /></a>
+                                <a href={`https://twitter.com/${Data.profile.twitter}`}><FiTwitter className='profile__icon' /></a>
+                                <a href={`https://github.com/${Data.profile.github}`}><FiGithub className='profile__icon' /></a>
                             </div>
                         </div>
                     </div>
@@ -92,24 +96,28 @@ function Post() {
                             <span className='total__reactions'>{Data.reactions.total}</span>
                             <span className='reaction'>
                                 <img src={heartSrc}
+                                    alt='heart'
                                     onMouseOver={e => setHeart(heart)}
                                     onMouseOut={e => setHeart(heart1)}
                                 />
                             </span>
                             <span className='reaction'>
                                 <img src={lightSrc}
+                                    alt='lightbulb'
                                     onMouseOver={e => setLigth(light)}
                                     onMouseOut={e => setLigth(light1)}
                                 />
                             </span>
                             <span className='reaction'>
                                 <img src={boatSrc}
+                                    alt='boat'
                                     onMouseOver={e => setBoat(boat1)}
                                     onMouseOut={e => setBoat(boat)}
                                 />
                             </span>
                             <span className='reaction'>
                                 <img src={moneySrc}
+                                    alt='money'
                                     onMouseOver={e => setMoney(money)}
                                     onMouseOut={e => setMoney(money1)}
                                 />
@@ -117,16 +125,16 @@ function Post() {
                         </div>
                         <div className='bottom__share'>
                             <span>Share this story</span>
-                            <a href='#'><FiLinkedin className='social__icon' /></a>
-                            <a href='#'><FiFacebook className='social__icon' /></a>
-                            <a href='#'><FiTwitter className='social__icon' /></a>
-                            <a href='#'><FiInstagram className='social__icon' /></a>
+                            <a href='/#'><FiLinkedin className='social__icon' /></a>
+                            <a href='/#'><FiFacebook className='social__icon' /></a>
+                            <a href='/#'><FiTwitter className='social__icon' /></a>
+                            <a href='/#'><FiInstagram className='social__icon' /></a>
                         </div>
                         <div className='bottom__prof__sub'>
                             <div className='bottom__profile'>
-                                <img src={Data.profile.avatar} className='profile__avatar' />
+                                <img src={Data.profile.avatar} alt='avatar' className='profile__avatar' />
                                 <div>
-                                    <h4><a href='#' className="bottom__profile__link">@{Data.profile.handle}</a></h4>
+                                    <h4><a href={`https://hackernoon.com/u/${Data.profile.handle}`} className="bottom__profile__link">@{Data.profile.handle}</a></h4>
                                     <h5>{Data.profile.handle}</h5>
                                 </div>
                             </div>
@@ -141,7 +149,6 @@ function Post() {
                 <fieldset><legend><h1>RELATED</h1></legend></fieldset>
             </div>
             <div className='relatedStory'>
-                {console.log('relatedss', Data.relatedStories)}
                 {Data.relatedStories.map((relatedStory, index) => {
                     return (
                         <Related relatedStory={relatedStory} key={index} />
@@ -153,13 +160,13 @@ function Post() {
                 <div className='tag'>
                     {Data.tags.map((tag, index) => {
                         return (
-                            <a href='#' key={index}>#{tag}</a>
+                            <a href='/#' key={index}>#{tag}</a>
                         )
                     })}
                 </div>
             </div>
             <div className='joinhackernoon'>
-                <a href='#'>Join Haker Noon</a>
+                <a href='https://app.hackernoon.com/signup'>Join Haker Noon</a>
                 <p>create your free account to unclock your custom reading experience</p>
             </div>
         </div>
