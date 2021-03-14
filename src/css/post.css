@@ -79,10 +79,23 @@ margin: 2.5rem 0rem;
 }
 .info__right{
     align-self: flex-end;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.total__reactions{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 0.6rem;
 }
 .info__right img{
     width: 2rem;
     height: 2rem;
+    margin: 0.3rem;
+}
+.info__right img:hover{
+    cursor: pointer;
 }
 .mainImage{
     margin: 1.5rem 0rem;
@@ -151,6 +164,7 @@ blockquote{
 .bottom__reactions img{
     width: 2rem;
     height: 2rem;
+    margin-right: 0.5rem;
 }
 .bottom__share{
     text-align: right;
